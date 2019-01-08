@@ -2,7 +2,7 @@ import chroma from 'chroma-js'
 import { DARK_THEME, LIGHT_THEME } from '../ids'
 
 // The base defines the hue inside interface elements e.g. so greys get a shift of blue
-const UI_BASE = '#1E47FB'
+const UI_BASE = '#5054ff'
 
 const UI_BASE_DARK = '#232326'
 const UI_PRIMARY_DARK = UI_BASE
@@ -92,18 +92,17 @@ export const color = {
         },
     },
 
-
     // These colors are used throughout the UI for backgrounds
     interface: {
         // Used to clearly separate two ui components or make edges appear harder.
-        separator: {
-            [DARK_THEME]: 'rgba(255,255,255,0.1)',
+        divider: {
+            [DARK_THEME]: 'rgba(0,0,0,0.1)',
             [LIGHT_THEME]: 'rgba(0,0,0,0.1)',
         },
 
         // Slider
         sliderHandle: {
-            [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).brighten(5)),
+            [DARK_THEME]: '#E2E1E6',
             [LIGHT_THEME]: chroma(UI_BASE_LIGHT).brighten(4.5).hex(),
         },
 
@@ -114,19 +113,24 @@ export const color = {
 
         // Navigation Bar
         navigation: {
-            [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).brighten(0.2)),
+            [DARK_THEME]: '#202022',
             [LIGHT_THEME]: '#FFFFFF',
         },
 
         // Tool Bar
         tool: {
-            [DARK_THEME]:  getColorHue(chroma(UI_BASE_DARK)),
+            [DARK_THEME]: '#232326',
+            [LIGHT_THEME]: '#FBFBFB',
+        },
+
+        toolHeader: {
+            [DARK_THEME]: '#2a2a2e',
             [LIGHT_THEME]: '#FBFBFB',
         },
 
         // Canvas
         canvas: {
-            [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).darken(0.5)),
+            [DARK_THEME]: '#141415',
             [LIGHT_THEME]: '#EFF0F0',
         },
     }

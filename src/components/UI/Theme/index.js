@@ -44,6 +44,7 @@ const UITheme = ({ themeID = 'light', index }) => {
                     <Color colorGroups={appColor} themeID={themeID}/>
                     <Shadow themeID={themeID} />
                     <Typography typographyStyles={appTypography(themeID)} themeID={themeID}/>
+                    <Picture />
                 </View>
             </View>
         </Artboard>
