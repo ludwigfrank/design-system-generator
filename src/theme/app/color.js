@@ -10,7 +10,7 @@ const UI_PRIMARY_DARK = UI_BASE
 const UI_BASE_LIGHT = '#FDFDFD'
 const UI_PRIMARY_LIGHT = UI_BASE
 
-const getColorHue = (color) => {
+const getColorHue = color => {
     // const baseColor = UI_BASE
     // const colorLuminance = chroma(color).luminance()
     // const mixedColor = chroma.mix(color, chroma(baseColor).set('hcl.l', colorLuminance).rgb(), 0.04 - 0.04 * colorLuminance * colorLuminance, 'rgb')
@@ -38,20 +38,25 @@ export const color = {
         white: {
             [DARK_THEME]: '#ffffff',
             [LIGHT_THEME]: '#ffffff',
-        }
+        },
+
+        accent: {
+            [DARK_THEME]: UI_PRIMARY_DARK,
+            [LIGHT_THEME]: UI_PRIMARY_LIGHT,
+        },
     },
 
     accent: {
         primary: {
             [DARK_THEME]: UI_PRIMARY_DARK,
             [LIGHT_THEME]: UI_PRIMARY_LIGHT,
-            outline: true
+            outline: true,
         },
 
         danger: {
             [DARK_THEME]: '#ffb045',
             [LIGHT_THEME]: '#ff3d80',
-            outline: true
+            outline: true,
         },
     },
 
@@ -60,35 +65,35 @@ export const color = {
             [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).brighten(0.4)),
             [LIGHT_THEME]: getColorHue(chroma(UI_BASE_LIGHT).darken(0.2)),
             outline: true,
-            state: true
+            state: true,
         },
 
         standard: {
             [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).brighten(0.6)),
             [LIGHT_THEME]: getColorHue(chroma(UI_BASE_LIGHT).darken(0.6)),
             outline: true,
-            state: true
+            state: true,
         },
 
         hover: {
             [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).brighten(0.8)),
             [LIGHT_THEME]: getColorHue(chroma(UI_BASE_LIGHT).darken(0.7)),
             outline: true,
-            state: true
+            state: true,
         },
 
         pressed: {
             [DARK_THEME]: getColorHue(chroma(UI_BASE_DARK).brighten(1)),
             [LIGHT_THEME]: getColorHue(chroma(UI_BASE_LIGHT).darken(0.9)),
             outline: true,
-            state: true
+            state: true,
         },
 
         // Note the active state in most cases is the primary color
         active: {
             [DARK_THEME]: UI_PRIMARY_DARK,
             [LIGHT_THEME]: UI_PRIMARY_LIGHT,
-            outline: true
+            outline: true,
         },
     },
 
@@ -103,7 +108,9 @@ export const color = {
         // Slider
         sliderHandle: {
             [DARK_THEME]: '#E2E1E6',
-            [LIGHT_THEME]: chroma(UI_BASE_LIGHT).brighten(4.5).hex(),
+            [LIGHT_THEME]: chroma(UI_BASE_LIGHT)
+                .brighten(4.5)
+                .hex(),
         },
 
         sliderBackground: {
@@ -133,6 +140,5 @@ export const color = {
             [DARK_THEME]: '#141415',
             [LIGHT_THEME]: '#EFF0F0',
         },
-    }
+    },
 }
-
